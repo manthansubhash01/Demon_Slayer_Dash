@@ -42,33 +42,33 @@ export default function Game() {
     if (timeLeft === 0) setGameOver(true);
   }, [timeLeft]);
 
-  // Spawn a new random character at a random position
+
   const spawnCharacter = () => {
-    const isDemon = Math.random() < 0.3; // 30% chance of demon
+    const isDemon = Math.random() < 0.3; 
     const newCharacter = isDemon
       ? demons[Math.floor(Math.random() * demons.length)]
       : demonSlayers[Math.floor(Math.random() * demonSlayers.length)];
 
     setCharacter({ src: newCharacter, isDemon });
 
-    // Set random position on screen
+   
     setPosition({
       top: `${Math.random() * 80 + 10}%`,
       left: `${Math.random() * 80 + 10}%`,
     });
   };
 
-  // Handle player clicks on the character image
+
   const handleCharacterClick = () => {
     if (character.isDemon) {
-      setGameOver(true); // Clicking a demon ends the game
+      setGameOver(true); 
     } else {
-      setScore(score + 1); // Increase score
-      spawnCharacter(); // Spawn a new character
+      setScore(score + 1); 
+      spawnCharacter(); 
     }
   };
 
-  // Restart the game
+
   const restartGame = () => {
     setScore(0);
     setTimeLeft(10);
@@ -76,7 +76,7 @@ export default function Game() {
     spawnCharacter();
   };
 
-  // Start the game by spawning the first character
+
   useEffect(() => {
     if (!gameOver) spawnCharacter();
   }, []);
@@ -85,7 +85,7 @@ export default function Game() {
     <div className="w-screen h-screen flex flex-col items-center justify-center bg-gray-900 text-white relative">
       <h1 className="text-3xl font-bold">Demon Slayer Click Challenge</h1>
 
-      {/* Timer Component */}
+
       <Timer
         timeLeft={timeLeft}
         setTimeLeft={setTimeLeft}
@@ -94,7 +94,7 @@ export default function Game() {
 
       <p className="text-xl">Score: {score}</p>
 
-      {/* Show ImageButton if game is active, otherwise show Game Over Screen */}
+     
       {!gameOver ? (
         <ImageButton
           character={character}
