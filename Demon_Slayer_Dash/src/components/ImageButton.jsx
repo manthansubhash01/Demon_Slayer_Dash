@@ -1,25 +1,25 @@
 import React from "react";
 
 
-export default function ImageButton({ character, position, handleClick }) {
+function ImageButton({ character, position, handleClick }) {
   if (!character) return null;
 
   return (
     <div
-      className="absolute cursor-pointer transition-all duration-200"
+      className="absolute w-full h-full bg-cover bg-no-repeat"
       style={{
-        top: position.top, 
-        left: position.left, 
-        width: "100px",
-        height: "100px",
+        top: position.top,
+        left: position.left,
       }}
-      onClick={handleClick} 
     >
       <img
         src={character.src}
-        alt={character.isDemon ? "Demon" : "Demon Slayer"} 
-        className="w-full h-full object-contain rounded-lg border-2 border-white"
+        alt="Character"
+        onClick={handleClick}
+        className="w-[130px] h-[160px] md:w-[160px] md:h-[190px] cursor-pointer transition-transform duration-200 hover:scale-110"
       />
     </div>
   );
 }
+
+export default ImageButton;
