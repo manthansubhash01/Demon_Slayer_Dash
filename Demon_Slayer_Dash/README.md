@@ -1,12 +1,16 @@
-# React + Vite
+# 🔥 Demon Slayer Click Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
+Demon Slayer Click Challenge** is an interactive click-based React game** where you must click on Demon Slayers to earn points while avoiding demons. If you mistakenly click on a demon, you lose instantly! Your goal is to reach 500 points** to win!
 
-Currently, two official plugins are available:
+## 🎮 How to Play
+1. Click on Demon Slayer characters** to earn points.
+2. DO NOT click on demons**, or the game ends immediately!
+3. If a demon appears, simply ignore it**, and the game will continue.
+4. You have 1-2 seconds** to click before a new character appears.
+5. Reach 500 points** to win the game! 🏆
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- React.js** ⚛️ - Frontend framework
+- Tailwind CSS** 🎨 - Styling
+- JavaScript (ES6+)** 🚀 - Game logic
